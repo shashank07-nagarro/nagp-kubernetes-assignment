@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejs-api-loadbalancer
+spec:
+  type: LoadBalancer
+  selector:
+    app: node-rest
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

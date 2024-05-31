@@ -1,0 +1,52 @@
+<!-- views/form.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 600px;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        width: 300px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Add User Form</h1>
+    <form action="/" method="post">
+      <label for="username">Username:</label><br />
+      <input type="text" id="username" name="username" /><br />
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" /><br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <h1>User list</h1>
+    <table>
+      <tr>
+        <th>Username</th>
+        <th>Email</th>
+      </tr>
+      <% items.forEach(function(item) { %>
+      <tr>
+        <td><%= item.username %></td>
+        <td><%= item.email %></td>
+      </tr>
+      <% }); %>
+    </table>
+  </body>
+</html>
