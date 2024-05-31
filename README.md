@@ -7,6 +7,7 @@ https://github.com/ershangpt/nagp-kubernetes-assignment
 ## Docker hub URL for docker images
 
 1: Used in deployment https://hub.docker.com/repository/docker/ershangpt/nodejs-express-api-v10/general
+
 2: Used in deployment rolling update https://hub.docker.com/repository/docker/ershangpt/nodejs-express-api-v11/general
 
 ## URL for Service API
